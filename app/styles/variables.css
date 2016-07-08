@@ -1,0 +1,135 @@
+:root {
+
+  --inner: 70rem;
+  /*Typography*/
+
+  /*Base*/
+
+  --fStackCuprum: 'Cuprum', sans-serif;
+  --fStackBadScript: 'Bad script',cursive, sans-serif;
+  --fStackLato: 'Lato', sans-serif;
+  --fStackMerriweather: 'Merriweather', serif;
+
+  --fSize: 16px;
+  --fFamily: var(--fStack);
+  --fColor: rgba(33,33,33, 1);/*коричнево-черный*/
+  --lineHeight: 1.6;
+  --fWeight: 400;
+
+  /* Alt */
+
+  --alt-fFamily: "Lato", "Helvetica",
+    sans-serif;
+  --alt-fColor: rgba(80,80,80, 1);  /*мокрый асфальт*/
+  --alt-lineHeight: var(--lineHeight);
+  --alt-fWeight: 300;
+
+  /*// Headings*/
+
+  --heading-fFamily: var(--fStackBadScript);
+  --heading-fSize: calc(var(--fSize)*1.8);
+  --heading-fWeight: 700;
+  --heading-fColor: inherit;
+  --heading-lineHeight: calc(var(--lineHeight) * 1.15);
+
+
+  --black: #000;
+  --white: #fff;
+
+  --colorPrimary: #555;
+  --colorSecondary: #888;
+  --colorNeutral: #666;
+
+  --linkColor:var(--color-primary);
+  --linkColorHover:var(--color-secondary);
+  --linkColorVisited:var(--link-color);
+  --linkColorFocus:var(--color-secondary);
+
+  --bgColor: rgba(245,245,245, 1); /*дымчато-серый*/
+
+  /* // TEXTURE  =================================*/
+
+  --borderColor: #d8d8d8;
+  --borderStyle: solid;
+  --borderWidth: 1px;
+  --borderRadius: 4px;
+  --border: var(--borderWidth) var(--borderStyle) var(--borderColor);
+
+  /*Proportions */
+  --spacing: calc( var(--lineHeight) * 1rem);
+  --smallSpacing: calc(var(--spacing) / 2);
+    /*Animation*/
+
+    --duration: 150ms;
+    --timing: ease;
+    --delay: .1s;
+     /*Extend (to use: @apply --nameExtend )*/
+
+   --link: {
+   display: block;
+   background: transparent;
+   color: var(--linkColor);
+   transition: all var(--duration) var(--timing) var(--delay);
+ }
+
+  --title: {
+    font-family: var(--heading-fFamily);
+    color: var(--heading-fColor);
+    font-weight: var(--heading-fWeight);
+    font-size: var(--heading-fSize);
+    line-height: var(--heading-lineHeight);
+    padding: var(--smallSpacing);
+  }
+  --text: {
+     padding: var(--smallSpacing);
+  }
+
+  --image:{
+    margin: 0;
+    width: 100%;
+    border: 0;
+    outline: none;
+  }
+
+  --btn: {
+    display: inline-block;
+    padding: var(--smallSpacing);
+    border: 0;
+    border-color: var(--colorPrimary);
+    border-radius: var(--borderRadius);
+    background-color: transparent;
+    color: var(--colorPrimary);
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: var(--fSize);
+    font-family: var(--fFamily);
+    line-height: 1;
+    cursor: pointer;
+    transition: background var(--duration) var(--timing);
+    user-select: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/*Global Grid Settings*/
+/*
+@lost gutter 60px;
+@lost flexbox flex;
+@lost cycle none;
+@lost clearing left;
+*/
+
+/*gutter accepts any unit value. 30px (default).
+- flexbox accepts flex or no-flex (default).
+- cycle accepts none or any digit (although this is really weird). auto by default.
+- clearing accepts left or both (default).
+*/
+
+
+/*//media-query break-points (bp-) (960px/640px/480px)*/
+@custom-media --bp-small (min-width: 25em);
+@custom-media --bp-medium (min-width: 40em);
+@custom-media --bp-large (min-width: 60em);

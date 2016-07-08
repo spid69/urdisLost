@@ -1,0 +1,36 @@
+
+
+/*Grid (g-)*/
+
+.g-inner {
+  lost-center: var(--inner);
+}
+
+.g-row {
+  width: 100%;
+  lost-utility: clearfix;
+}
+
+.g-third {
+  lost-column: 1/3 0;
+}
+
+.g-2-third {
+  lost-column: 2/3 0;
+}
+
+.g-quarter {
+  lost-column: 1/4 0;
+}
+
+.g-3-quarter {
+  lost-column: 3/4 0;
+}
+
+.g-three-quarter {
+  lost-column: 3/4 0;
+}
+
+.g-half {
+  lost-column: 1/2 0;
+}
